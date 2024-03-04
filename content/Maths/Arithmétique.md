@@ -47,9 +47,7 @@ Alors $a \wedge b = \lvert a \rvert$
 
 
 >[!tip] Lemme 2.6 : Égalités de PGCD
->Soient $(m, M) \in \mathbb{Z}^{2}$. Alors
-> $$
-m \wedge M = m \wedge (M - m)$$
+>Soient $(m, M) \in \mathbb{Z}^{2}$. Alors $$m \wedge M = m \wedge (M - m)$$
 
 
 
