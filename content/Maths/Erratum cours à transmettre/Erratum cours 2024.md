@@ -1,3 +1,5 @@
+Je dois vraiment penser à transmettre ces informations pour les corriger
+
 ![[Pasted image 20240201225331.png]]
 ![[9cd7e7c1cb1c45fc215b24873842ef91_MD5.jpeg]]
 ![[c5049996388af23a209b70ef1d5ea56c_MD5.jpeg]]
