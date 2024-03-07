@@ -55,7 +55,8 @@ let est_rouge_filtrage_equivalent (c :carte) : bool =
 	| _ -> false
 ```
 
-Pour se donner une autre idée de comment marche le pattern matching, regardons comment se comport la syntaxe pour les valeurs définies avec des constructeurs :
+Pour se donner une autre idée de comment marche le pattern matching, regardons comment se comporte la syntaxe pour les valeurs définies avec des constructeurs :
+
 ```ocaml
 let est_un_trois (c :carte) : bool =
 	(* Teste si c est un trois *)
@@ -64,3 +65,4 @@ let est_un_trois (c :carte) : bool =
 	| Brele (k) -> k = 3
 	| Tete (_) -> false
 ```
+
