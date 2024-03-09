@@ -17,7 +17,7 @@
 
 > [!tip] Caractérisation de la multiplicité d'une racine $a$
 > $a$ est de multiplicité $\geqslant m$ ssi $(X-a)^{m} \mid P$
-> $a$ est de multiplicité $= m$ ssi $(X-a)^{m} \mid P$ et $(X-a)^{m+1} \mid P$
+> $a$ est de multiplicité $= m$ ssi $(X-a)^{m} \mid P$ et $(X-a)^{m+1} \nmid P$
 
 
 > [!tip] Caractérisation de la multiplicité par les valeurs de la dérivées

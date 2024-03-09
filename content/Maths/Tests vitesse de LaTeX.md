@@ -1,3 +1,8 @@
+
+> [!question] À ne pas prendre au sérieux
+> Je vous demande de bien vouloir éviter de prendre cette page au sérieux
+
+
 $$
  \sum_{0}^n f(t) 
 \ddot{g}
@@ -60,6 +65,7 @@ $$
 
 >[!quote] Définition
 >La primitive de $f$ qui s'annule en $a$ se note
+>
 >$$\int_{a}^{x} f(t) \, dt $$
 
 $$

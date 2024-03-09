@@ -213,3 +213,22 @@ type triplets_entiers = (int, int) triplet_special
 
 ### Types somme et filtrage
 ![[Cartes de Jeu]]
+
+La syntaxe d’un filtrage par motif est la suivante :
+```ocaml
+match expr0 with  
+| motif1 −> expr1
+| motif2 −> expr2
+| ..............
+| motifn −> exprn
+```
+
+L’ordre dans lequel on essaye de faire correspondre un motif et une valeur a de l’importance :
+```ocaml
+let sinc = function | x −> sin(x) /. x | 0. −> 1.
+
+Toplevel input :  
+> | 0. −> 1. ;;  
+> ^^  
+Warning : t h i s matching case i s unused . sinc : float −> float = <fun>
+```

@@ -3,7 +3,7 @@ import * as Plugin from "./quartz/plugins"
 
 const config: QuartzConfig = {
   configuration: {
-    pageTitle: "📚 Cahier de Mathsup",
+    pageTitle: "Notes MP1",
     enableSPA: true,
     enablePopovers: true,
     analytics: {

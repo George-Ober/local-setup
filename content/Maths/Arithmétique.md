@@ -83,11 +83,7 @@ $$
 >$$n \in \mathcal{P} \iff \text{ aucun diviseur dans } [ \! [ 2, \lfloor \sqrt{ x } \rfloor] \!]$$
 
 >[!tip] Caractérisation de la valuation p-adique de $n \in \mathbb{Z}^{*}$
->$$
-\nu_{p}(n) = k_{0} \iff \exists m \in \mathbb{Z} : \left\{ \begin{array}{\ll}
-n = p^{k_{0}}m \\
-m \wedge p =1
-\end{array} \right.$$
+>$$\nu_{p}(n) = k_{0} \iff \exists m \in \mathbb{Z} : \left\{ \begin{array}{\ll} n = p^{k_{0}}m \\ m \wedge p =1\end{array} \right.$$
 
 >[!tip] Définition Famille propre nulle
 >Une famille propre nulle d'entiers naturels indexés par les nombres remiers est une application 
