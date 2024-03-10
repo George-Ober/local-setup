@@ -30,3 +30,9 @@
 > [!tip] Lemme de factorisation 3
 > $a$ est de multiplicité au moins $m$ ssi $\exists Q \in \mathbb{K}[X]: P = (X-a)^{m}Q$
 > $a$ est de multiplicité exactement $m$ ssi $\exists Q \in \mathbb{K}[X]: P = (X-a)^{m}Q$ et $\tilde{Q}(a) \neq 0$
+
+
+>[!tip] Identifications entre polynômes et fonctions polynômiales si $\mathbb{K}$ infini
+>Pour $\mathbb{K}$ un corps infini (pas forcément de caractéristique nulle), $\Phi \left|\begin{array}{ll} \mathbb{K}[X]&\to\mathcal{F}(\mathbb{K}, \mathbb{K}) \\ P &\mapsto\tilde{P} \end{array}\right.$ est un morphisme d'anneaux injectif, ce qui permet d'identifier $\mathbb{K}[X]$ à $\Phi(\mathbb{K}[X])= \mathbb{K}[x]$.
+
+![[Théorème d'interpolation de Lagrange]]
