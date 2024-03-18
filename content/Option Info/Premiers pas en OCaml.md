@@ -1,5 +1,5 @@
 Fichiers d'extension `.ml`.
-OCaml est un langage de programmation à la fois adapté pour la programmation [[Programmation Fonctionnelle|fonctionnelle]], [[impérative]], [[orientée objet]].
+OCaml est un langage de programmation à la fois adapté pour la programmation [[Programmation Fonctionnelle|fonctionnelle]], [[Programmation impérative]], [[orientée objet]].
 
 Ce langage possède son propre gestionnaire de paquets, [opam](https://opam.ocaml.org/) depuis lequel il est possible d'installer outils et librairies.
 
@@ -211,24 +211,83 @@ type ('a, 'b) triplet_special = 'a * 'b * 'a
 type triplets_entiers = (int, int) triplet_special
 ```
 
+### Types avec valeurs
+
+```ocaml
+type nom_type = 
+| Cons_1 [of t1]
+| Cons_2 [of t2]
+| Cons_3 [of t3]
+| Cons_n [of tn]
+```
+
+Où :
+- `nom_type` est un identifiant
+- `Cons_i` pour `i`$\in[ \! [ 1, n ] \!]$
+- `ti` sont des expressions de type (ce qui est entre crochets est optionnel)
+
+### Types récursifs
+```ocaml
+type 'a pile = | PV | PNV of 'a * pile
+```
+
 ### Types somme et filtrage
 ![[Cartes de Jeu]]
 
 La syntaxe d’un filtrage par motif est la suivante :
 ```ocaml
 match expr0 with  
-| motif1 −> expr1
-| motif2 −> expr2
-| ..............
-| motifn −> exprn
+| Cons_1 (var1) −> e1
+| Cons_2 (var2) −> e2
+| Cons_n (varn) −> en
 ```
+Où :
+- `expr0` est une expression de type `nom_type`, un type somme
+- `vari` pour `i`$\in [ \! [ 1, n ] \!]$  est un nom de variable qui [[Premiers pas en OCaml#Types avec valeurs|est de type]] `ti`
+- `ei` est une expression qui peut utiliser `vari`
 
-L’ordre dans lequel on essaye de faire correspondre un motif et une valeur a de l’importance :
+
+> [!warning] Priorisation
+> L’ordre dans lequel on essaye de faire correspondre un motif et une valeur a de l’importance :
+
 ```ocaml
 let sinc = function | x −> sin(x) /. x | 0. −> 1.
-
-Toplevel input :  
-> | 0. −> 1. ;;  
-> ^^  
-Warning : t h i s matching case i s unused . sinc : float −> float = <fun>
 ```
+
+```
+Toplevel input :  
+> | 0. −> 1. 
+> ^^  
+Warning : this matching case is unused. sinc : float −> float = <fun>
+```
+
+### Type option
+Dans certains cas, il est intéréssant de définir des fonctions qui peuvent renvoyer deux choses. Par exemple, imaginons une fonction `chercher3` qui doit chercher un trois et en renvoyer l'indice. Au lieu de renvoyer `-1` lorsque la fonction ne trouve rien, on peut préserver le type en utilisant un `int option`, qui permettra de renvoyer `None` le cas échéant.
+```ocaml
+type 'a option =
+| None
+| Some of 'a
+```
+
+### Filtrage de listes
+```ocaml
+match l with
+| [ ] ->
+| a :: q -> 
+```
+Où:
+- `l` est de type `'a list`
+- `a` est le sommet extrait, de type `'a`
+- `q` est le reste de la liste `'a list`
+>[!note] Note
+>L'usage que l'on fait des listes en OCaml ne diffère pas substantiellement de l'usage d'une pile
+
+## Fonctions anonymes
+
+```ocaml
+fun arg1 arg2 argn -> exp
+```
+Où:
+- `arg1` ... `argn` sont les arguments
+- `expr` est une expresion qui peut faire intervenir `arg1` ... `argn`
+est une expression de type `t1 -> t2 -> tn -> t` où `t` est le type de `expr`.

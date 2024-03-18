@@ -1,0 +1,3 @@
+La programmation impérative est un paradigme de programmation qui se concentre sur la description de la séquence d'instructions à exécuter pour résoudre un problème. Dans ce paradigme, un programme est construit comme une série d'instructions qui spécifient exactement comment les opérations doivent être effectuées par l'ordinateur.
+
+Les langages de programmation impératifs utilisent généralement des variables pour stocker les données et des structures de contrôle telles que les boucles et les instructions conditionnelles pour contrôler le flux d'exécution du programme. Les instructions impératives modifient l'état des variables au fur et à mesure de l'exécution du programme.
